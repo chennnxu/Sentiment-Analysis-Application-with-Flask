@@ -19,6 +19,5 @@ def sentiment_analysis_func(text_to_analyse):
     # print(score)
     return polarity, sujectivity, score
 
-# print('Start running the code')
 # if __name__ == "__main__": 
 #     sentiment_analysis_func("I am glad this happened")
