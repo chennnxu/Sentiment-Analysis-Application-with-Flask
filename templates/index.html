@@ -1,37 +1,5 @@
-<!-- <html>
-<head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="./static/mywebscript.js"></script>
-    <style>
-        .center-heading {
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-    <div class="card">
-        <div class="card-body">
-            <h1 class="center-heading">Sentiment Analysis with spaCy</h1> 
-            <div style="padding: 25px 25px 25px 25px;">
-            <h2 class="mb-3">
-                <label class="form-label">Please enter the text to be analyzed</label>
-                <input type="textarea" class="form-control" id="textToAnalyze">
-            </h2>
 
-            <div style="padding: 25px 25px 25px 25px;">
-                <button onclick="RunSentimentAnalysis()" class="btn btn-secondary">Run Sentiment Analysis</button>
-            </div>
-            <div style="padding: 25px 25px 25px 25px;"></div>
-            <h2 class="mb-3">
-                <label class="form-label">Result of Sentiment Analysis</label>
-            </h2>
-
-            <div id="system_response" style="padding: 25px 25px 25px 25px;"></div>
-        </div>
-    </div>
-</body> -->
-
-
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,6 +34,62 @@
                 <div id="system_response"></div>
             </div>
         </div>
+    </div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis with spaCy</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="./static/mywebscript.js"></script>
+    <style>
+        .card {
+            margin: 50px auto;
+            max-width: 680px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card text-center">
+        <div class="card-header">
+            <h3>Sentiment Analysis with spaCy</h3>
+        </div>
+        <div class="card-body">
+            <!-- <h1 class="center-heading">Sentiment Analysis with spaCy</h1>  -->
+            <div class="mb-3">
+                <label for="textToAnalyze" class="form-label">Please enter the text to be analyzed</label>
+                <textarea class="form-control" id="textToAnalyze" rows="4"></textarea>
+            </div>
+
+            <div class="text-center">
+                <button onclick="RunSentimentAnalysis()" class="btn btn-primary">Run Sentiment Analysis</button>
+            </div>
+            <hr>
+            <h4 class="mb-3">
+                Result of Sentiment Analysis
+            </h4>
+
+            <div id="system_response" class="text-center"></div>
+            <!-- <div id="system_response" class="slider-container">
+                <div class="mb-3">
+                    <label for="sentimentSlider1" class="slider-label">Sentiment 1 (-1 to 1): <span id="sentimentValue1" class="slider-value">0</span></label>
+                    <input type="range" class="form-control-range" id="sentimentSlider1" min="-1" max="1" step="0.1" value="0">
+                </div>
+                <div class="mb-3">
+                    <label for="sentimentSlider2" class="slider-label">Sentiment 2 (0 to 1): <span id="sentimentValue2" class="slider-value">0</span></label>
+                    <input type="range" class="form-control-range" id="sentimentSlider2" min="0" max="1" step="0.1" value="0">
+                </div>
+            </div> -->
+        </div>
+    <div class="card-footer text-muted">
+        <p>Just for fun ;)</p>
+        <p>The polarity score is a float within the range [-1.0, 1.0]. The subjectivity is a float within the range [0.0, 1.0] where 0.0 is very objective and 1.0 is very subjective.</p>
+    </div>
     </div>
 </body>
 </html>
