@@ -23,5 +23,5 @@ pip install -r requirements.txt
 
 ```
 python3 server.py
-url: http://localhost:4200/
+url: http://localhost:5000/
 ```
