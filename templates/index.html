@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="./static/mywebscript.js"></script>
@@ -11,7 +11,7 @@
 <body>
     <div class="card">
         <div class="card-body">
-            <h1 class="center-heading">NLP - Emotion Detection</h1> 
+            <h1 class="center-heading">Sentiment Analysis with spaCy</h1> 
             <div style="padding: 25px 25px 25px 25px;">
             <h2 class="mb-3">
                 <label class="form-label">Please enter the text to be analyzed</label>
@@ -23,10 +23,49 @@
             </div>
             <div style="padding: 25px 25px 25px 25px;"></div>
             <h2 class="mb-3">
-                <label class="form-label">Result of Emotion Detection</label>
+                <label class="form-label">Result of Sentiment Analysis</label>
             </h2>
 
             <div id="system_response" style="padding: 25px 25px 25px 25px;"></div>
         </div>
     </div>
+</body> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis with spaCy</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="./static/mywebscript.js"></script>
+    <style>
+        .center-heading {
+            text-align: center;
+        }
+        .card-body {
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="center-heading">Sentiment Analysis with spaCy</h1> 
+                <div class="form-group">
+                    <label for="textToAnalyze">Please enter the text to be analyzed</label>
+                    <textarea class="form-control" id="textToAnalyze" rows="5"></textarea>
+                </div>
+                <div class="text-center">
+                    <button onclick="RunSentimentAnalysis()" class="btn btn-primary">Run Sentiment Analysis</button>
+                </div>
+                <hr>
+                <h2 class="center-heading">Result of Sentiment Analysis</h2>
+                <div id="system_response"></div>
+            </div>
+        </div>
+    </div>
 </body>
+</html>

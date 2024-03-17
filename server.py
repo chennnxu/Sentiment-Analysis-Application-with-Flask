@@ -6,7 +6,7 @@ from flask import Flask, render_template, request
 from SentimentAnalysis.sentiment_analysis import sentiment_analysis_func
 app = Flask("Sentiment Analysis")
 
-@app.route("/emotionDetector")
+@app.route("/sentimentAnalysis")
 def sentiment_analysis_function():
     ''' This function calls the application
     '''
@@ -15,7 +15,7 @@ def sentiment_analysis_function():
     if len(response[2]) == 0:
         response_text = "Invalid Input! Please try again."
     else:
-        response_text = f"For the given statement, 'polarity': {response[0]}, 'subjectivity': {response[1]}."
+        response_text = f"For the given statement, 'polarity': {response[0]:.2f}, 'subjectivity': {response[1]:.2f}."
 
     return response_text
 
